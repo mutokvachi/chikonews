@@ -11,7 +11,6 @@ class ScoreController extends Controller
     	$javascript = asset('/js/scoreboard.js');
 
     	$scores = Score::orderBy('score','desc')->get();
-
     	
     	return view('scoreboard',compact('javascript', 'scores'));
     }
