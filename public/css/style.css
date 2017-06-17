@@ -1,0 +1,418 @@
+body{
+	background: url('../img/bg.jpg') no-repeat;
+}
+/* Login */
+.login-box{
+	font-family: arial;
+	width: 350px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateY(-30%);
+	transform: translateX(-50%);
+	box-shadow:0 0 1px #000;
+}
+.login-box header{
+	background: #FF7052;
+	overflow: hidden;
+	padding: 10px 0px;
+}
+.login-box header div{
+	font-size: 30px;
+	color: #fff;
+	margin-left: 25px;
+}
+.login-box .content{
+	background: #fff;
+	height: 210px;
+}
+.login-box form{
+	margin: 0 auto;
+	width: 320px;
+	position: relative;
+}
+.login-box form .style{
+	border: 1px solid #EEEEEE;
+	color: #75758A;
+	padding: 10px 0px;
+	padding-left: 35px;
+	font-size: 17px; 
+	border-radius: 5px;
+	width: 285px;
+}
+.login-box form i{
+	font-size: 23px;
+	color: #D4D4D4;
+	position: absolute;
+	left: 7px;
+}
+.login-box form .error{
+	color: red;
+}
+.login-box form i:nth-child(1){
+	top:8px;
+}
+.login-box form .fa-lock{
+	top:68px;
+	left: 10px;
+}
+.login-box form .send_style{
+	display: inline;
+	border: 12px solid #fff;
+	border-radius: 45px;
+	position: absolute;
+	top: 125px;
+	left: 115px;
+	cursor: pointer;
+}
+.login-box form .send_style:hover i{
+	transition: all 1s;
+	color: #fff;
+}
+.login-box form .send_style:hover button{
+	transition: all 1s;
+	background: #FF7052;
+}
+.login-box form .send_style button{
+	background: none;
+	border: none;
+	border: 2px solid #FF7052;
+	border-radius: 35px;
+	padding: 29px 29px;
+	background: #fff;
+	z-index: 100;
+	cursor: pointer;
+}
+.login-box form .send_style i{
+	color: #FF7052;
+	font-size: 35px;
+	top: 12px;
+	left: 15px;
+	z-index: 0;
+}
+/* Login End */
+/* header */
+nav{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+nav div{
+	margin: 0px 5px;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	border: 1px solid #FF7052 !important;
+}
+nav div:hover{
+	transition: all 0.7s ;
+	background: #FF7052 !important;
+}
+nav div:hover a{
+	text-decoration: none;
+	transition: all 0.7s;
+	color: #fff;
+}
+nav a{
+	color: #FF7052;
+	font-size: 19px;
+	padding: 11px;
+}
+.clear{
+	clear: both;
+}
+/* Header End */
+/* Home */
+.products header{
+	border-bottom: 2px solid #FF7052;
+	overflow: hidden;
+	padding-bottom: 5px;
+}
+.products .load_more{
+	margin-top: 15px;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+.products .load_more:hover{
+	text-decoration: underline;
+}
+.products header div{
+	font-weight: bold;
+	color: #000;
+}
+.products .product{
+	padding: 10px 0px;
+	border-top: 1px solid #FF7052;
+	overflow: hidden;
+	color: #000;	
+}
+.products .product div:last-child{
+	font-size: 12px;
+}
+.products .add_product{
+	font-size: 18px;
+	margin-top: 25px;
+	cursor: pointer;
+}
+.products .my_modal{
+	overflow: hidden;
+	background: #f2fafd;
+	width: 350px;
+	position: absolute;
+	top: 10%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	display: none;
+	border-radius: 5px;
+	padding-bottom: 15px;
+}
+.products .my_modal .header{
+	background:rgb(255, 112, 82);
+	height: 50px; 
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: #fff;
+}
+.products .my_modal .header h2{
+	margin: 0px;
+	float: left;
+	font-weight: bold;
+	font-size: 22px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.products .my_modal .header i{
+	float: right;
+	margin-top: 15px;
+	margin-right: 15px;
+	font-size: 18px;
+	cursor: pointer;
+}
+.products .my_modal .btn-primary{
+	background: rgb(255, 112, 82);
+	border: 1px solid rgb(255, 112, 82);
+	font-size: 18px;
+}
+.products .my_modal .btn-primary:hover{
+	transition: all 0.5s;
+	color: #000;
+	border: 1px solid #fff;
+}
+.products .my_modal form{
+	padding: 5px 15px;
+}
+.products .my_modal textarea{
+	max-width: 320px;
+}
+/* Home End */
+
+/*ScoreBoard*/
+
+.scoreboard .content{
+	width: 350px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+.scoreboard header{
+	background: #bbd4cc;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+}
+.scoreboard header div{
+	float: left;
+	font-size: 20px;
+	padding: 5px 10px;
+	color: black;
+	font-weight: bold;
+}
+.scoreboard header div:first-child{
+	width: 200px;
+	border-right: 1px solid #fff; 
+}
+.scoreboard .board{
+	overflow: hidden;
+}
+.scoreboard .score{
+	overflow: hidden;
+}
+.scoreboard .score div{
+	float: left;
+	font-size: 15px;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+.scoreboard .score:nth-child(even){
+	background: #ecd3ac;
+}
+.scoreboard .score:nth-child(odd){
+	background: #fff;
+}
+.scoreboard .score div:first-child{
+	width: 200px;
+	border-right: 1px solid #fff; 
+}
+/*ScoreBoard End*/
+
+/* Posts*/
+.posts .post{
+	overflow: hidden;
+	margin-bottom: 35px;
+	border-radius: 10px;
+    box-shadow: 0 0 10px;
+}
+.posts .post_head{
+	border-bottom: 2px solid black;
+	overflow: hidden;
+	background: #FF7052;
+	padding: 15px;
+	font-size: 18px;
+}
+.posts .post_head i{
+	float: right;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.posts .post_head i:nth-child(2){
+	margin-top: -1px;
+}
+.posts .post_head i:hover{
+	color: #fff;
+}
+.posts .post_head form{
+	position: relative;
+}
+.posts .post_head img{
+	width: 100%;
+	max-width: 50px;
+	height: auto;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+.posts .post_head textarea{
+	margin-right: 15px !important;
+	max-width: 1108px;
+	resize: none;
+	padding-right: 115px;
+}
+.posts .post_head .btn{
+	position: absolute;
+	font-size: 20px;
+	right: 0px;
+	bottom: 0px;
+	padding: 12px;
+}
+
+.posts .comment{
+	padding: 10px 20px;
+	background: #343C47;
+	overflow: hidden;
+	color: #fff;
+	border-bottom: 2px solid #2D3540;
+}
+.posts .comment a{
+	float: right;
+	margin-right: 10px;
+	cursor: pointer;
+	font-size: 15px;
+}
+.posts .comment a:hover{
+	color: rgb(255, 112, 82);
+}
+.posts .comment img{
+	max-width: 40px;
+	width: auto;
+	height: auto;
+	float: left;
+	margin-right: 15px;
+}
+.posts .load_more{
+	background: #21242d;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.posts .my_modal{
+	overflow: hidden;
+	background: #ccc;
+	width: 350px;
+	position: absolute;
+	top: 10%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	display: none;
+	border-radius: 5px;
+	padding-bottom: 15px;
+}
+.posts .my_modal .header{
+	background:rgb(255, 112, 82);
+	height: 50px; 
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: #fff;
+}
+.posts .my_modal .header h2{
+	margin: 0px;
+	float: left;
+	font-weight: bold;
+	font-size: 22px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.posts .my_modal .header i{
+	float: right;
+	margin-top: 15px;
+	margin-right: 15px;
+	font-size: 18px;
+	cursor: pointer;
+}
+.posts .my_modal .btn-primary{
+	background: rgb(255, 112, 82);
+	border: 1px solid rgb(255, 112, 82);
+	font-size: 18px;
+}
+.posts .my_modal .btn-primary:hover{
+	transition: all 0.5s;
+	color: #000;
+	border: 1px solid #fff;
+}
+.posts .my_modal form{
+	padding: 5px 15px;
+}
+.posts .my_modal textarea{
+	max-width: 320px;
+	min-height: 150px;
+}
+/* Posts End*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 1200px){
+	.products .product div:last-child{
+		font-size: 9px;
+	}
+}
+@media screen and (max-width: 768px){
+	.products .product div:last-child{
+		font-size: 14px;
+	}
+}
+
+/* Responsive End*/
