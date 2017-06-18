@@ -30,6 +30,8 @@
 				@endif
 				<input type="password" name="password" placeholder="Password" class="style" value="{{ old('password') }}">
 				<br>
+				<br>
+				<div class="pull-right"><a href="auth/facebook"><img src="{{ asset('img/fb.png') }}" style="width: 120px;"></a></div>
 				<div class="send_style">
 					<button type="submit" name="send" class="" value><i class="fa fa-long-arrow-right"></i></button>
 				</div>

@@ -14,9 +14,12 @@
 Route::get('/', ['uses'=>'LoginController@show', 'as'=>'login']);
 Route::post('/', ['uses'=>'LoginController@store', 'as'=>'authorization']);
 
+Route::get('auth/facebook', 'Auth\RegisterController@redirectToProvider');
+Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCallback');
+
 Route::group(['middleware'=>'auth'], function(){
-	Route::get('/home',['uses'=>'LoginController@success', 'as'=>'home']);
-	Route::post('/home', ['uses'=>'LoginController@put', 'as'=>'add_product']);
+	Route::get('home',['uses'=>'LoginController@success', 'as'=>'home']);
+	Route::post('home', ['uses'=>'LoginController@put', 'as'=>'add_product']);
 	Route::get('/home/ajax', ['uses'=>'LoginController@ajax', 'as'=>'ajax']);
 	Route::get('/logout', ['uses'=>'LoginController@logout']);
 

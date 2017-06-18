@@ -17,7 +17,7 @@ class LoginController extends Controller
 
     public function store(Request $request){
         $validator = Validator::make($request->all(),[
-            'email'=>'required|email|unique:users,email',
+            'email'=>'required|email',
             'password'=>'required'                    
         ]);
         

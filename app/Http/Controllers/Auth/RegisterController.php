@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Socialite;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -67,5 +68,43 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+        /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleProviderCallback()
+    {
+        
+        try{
+            $socialUser = Socialite::driver('facebook')->user();
+        }
+        catch (\Exception $e){
+            return redirect('home');
+        }
+        $user = User::where('facebook_id',$socialUser->getId())->first();
+        if(!$user){
+            User::create([
+                    'facebook_id'=>$socialUser->getId(),
+                    'name'=>$socialUser->getName(),
+                    'email'=>$socialUser->getEmail(),
+                ]);
+        }
+            auth()->login($user);
+            return redirect()->to('/home');
+
+        // $user->token;
+        return $user->getEmail();
     }
 }
